@@ -1,0 +1,50 @@
+<div class="container">
+
+  <h1 class="text-center">Contact List</h1>
+
+
+  <div class="spacer"></div>
+
+  <div class="row text-center">
+      <form class="form-inline" method="post" action="/new">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input name="name" type="text" class="form-control" id="name" placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input name="email" type="email" class="form-control" id="email" placeholder="jane.doe@example.com">
+        </div>
+         <div class="form-group">
+          <label for="number">Phone</label>
+          <input name="number" type="text" class="form-control" id="number" placeholder="604-222-2590">
+        </div>
+        <button type="submit" class="btn btn-default">Add New Contact</button>
+      </form>
+  </div>
+
+  <div class="big-spacer"></div>
+
+  <div class="contacts row">
+    <div class="col-sm-4 contact">
+      <h3>Contacts</h3>
+    </div>
+
+    <div id="contact-list">
+      <% @contacts.each do |contact| %>
+        <div class="col-sm-4 contact" id="<%= contact.id %>">
+          <div class="contact-header">
+            <a href ="/post" data-type="text" data-pk="<%= contact.id %>" data-url="/post" data-name="name" class="contact-name"><%= contact.name %></a> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span class="glyphicon glyphicon-minus" aria-hidden="true"></span><span class="glyphicon glyphicon-remove delete-contact" aria-hidden="true"></span>
+          </div>
+          <div class="contact-body">
+            <a href ="/post" data-type="text" data-pk="<%= contact.id %>" data-url="/post" data-name="email" class="contact-email"><%= contact.email %></a><a href ="/post" data-type="text" data-pk="<%= contact.id %>" data-url="/post" data-name="number" class="contact-number"><%= contact.number %></a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+
+  </div>
+
+</div>

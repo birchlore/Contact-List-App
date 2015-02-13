@@ -1,0 +1,41 @@
+.glyphicon {
+    font-size: 11px;
+    margin: 0 3px;
+}
+
+.spacer {
+  margin: 40px 0;
+}
+
+.big-spacer {
+  margin: 80px 0;
+}
+
+.contact {
+  float:none;
+  margin: 0 auto;
+  border: 1px solid grey;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.contact-body {
+  display: none;
+  font-size: 15px;
+}
+
+.delete-contact {
+  color:red;
+  display:none;
+  float: right;
+  font-size:11px;
+  margin: 11px 3px;
+}
+
+.glyphicon-minus {
+  display:none;
+}
+
+.contact-email {
+  display:block;
+}
