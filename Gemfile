@@ -13,7 +13,8 @@ gem "sinatra-cross_origin", "~> 0.3.1"
 gem 'puma'
 gem 'tux'
 gem 'pg'
+gem 'pry'
 
 group :development, :test do
-  # gem 'pry'
+
 end
