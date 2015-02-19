@@ -36,7 +36,6 @@ var inlineEdit = function() {
   var successCallback = function(data) {
 
           $('#contact-list').empty();
-          debugger
           data.forEach(function(contact) {
 
             html =  '<div class="col-sm-4 contact" id="'+contact.id+'"><div class="contact-header"><a href ="/post" data-type="text" data-pk="'+contact.id+'" data-url="/post" data-name="name" class="contact-name">'+contact.name+'</a> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span class="glyphicon glyphicon-minus" aria-hidden="true"></span><span class="glyphicon glyphicon-remove delete-contact" aria-hidden="true"></span></div><div class="contact-body"><a href ="/post" data-type="text" data-pk="'+contact.id+'" data-url="/post" data-name="email" class="contact-email">'+contact.email+'</a><a href ="/post" data-type="text" data-pk="'+contact.id+'" data-url="/post" data-name="number" class="contact-number">'+contact.number+'</a></div></div>'
@@ -69,8 +68,9 @@ var inlineEdit = function() {
         type: "POST",
         url:"/new",
         data: postData,
-        
+        success: successCallback
     });
+
   });
 
 
