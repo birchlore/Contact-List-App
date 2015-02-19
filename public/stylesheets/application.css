@@ -20,17 +20,24 @@
   margin: 0 auto;
 }
 
+
 .contact {
-  border: 1px solid grey;
+  overflow:hidden;
+  border: 1px solid #CFCFCF;
   font-size: 25px;
   padding: 10px;
   text-align:center;
+  height: 60px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
-
 .contact-body {
-  display: none;
   font-size: 15px;
+  height:20px;
+  padding-top:8px;
 }
 
 .delete-contact {
@@ -38,11 +45,14 @@
   float: right;
   font-size:11px;
   margin: 11px 3px;
-}
-
-.hidden {
   visibility:hidden;
 }
+
+.tagline {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size:20px;
+}
+
 
 .glyphicon-minus {
   display:none;

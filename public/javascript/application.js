@@ -16,19 +16,23 @@ var inlineEdit = function() {
 
   var showContactInfo = function() { 
     $('.glyphicon-plus').click(function(){
-      $(this).closest('.contact').find('.contact-body').toggle();
+      $(this).closest('.contact').animate({height:'110'}, 100);
       $(this).toggle();
-      $(this).next().toggle();
-      $(this).siblings().last().show();
+      $(this).next().fadeIn();
+      $(this).siblings().last().css({
+        'visibility': 'visible'
+      });
     });
   };
 
   var hideContactInfo = function() { 
     $('.glyphicon-minus').click(function(){
-      $(this).closest('.contact').find('.contact-body').toggle();
+      $(this).closest('.contact').animate({height:'60'}, 100);      
       $(this).toggle();
-      $(this).prev().toggle();
-      $(this).siblings().last().hide();
+      $(this).prev().fadeIn();
+      $(this).siblings().last().css({
+        'visibility': 'hidden'
+      });
     });
   };
 

@@ -1,6 +1,7 @@
 <div class="container">
 
   <h1 class="text-center">Contact.io</h1>
+  <span class="tagline"><center>a bare bones jQuery contact list</center></span>
 
 
   <div class="spacer"></div>
@@ -25,15 +26,12 @@
   <div class="big-spacer"></div>
 
   <div class="contacts row col-sm-8">
-    <div class="contact">
-      <h3>Contacts</h3>
-    </div>
-
+  
     <div id="contact-list">
       <% @contacts.each do |contact| %>
         <div class="contact" id="<%= contact.id %>">
           <div class="contact-header text-center">
-            <a href ="/post" data-type="text" data-pk="<%= contact.id %>" data-url="/post" data-name="name" class="contact-name"><%= contact.name %></a> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span class="glyphicon glyphicon-minus" aria-hidden="true"></span><span class="glyphicon glyphicon-remove delete-contact hidden" aria-hidden="true"></span>
+            <a href ="/post" data-type="text" data-pk="<%= contact.id %>" data-url="/post" data-name="name" class="contact-name"><%= contact.name %></a> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span class="glyphicon glyphicon-minus" aria-hidden="true"></span><span class="glyphicon glyphicon-remove delete-contact" aria-hidden="true"></span>
           </div>
           <div class="contact-body">
             <a href ="/post" data-type="text" data-pk="<%= contact.id %>" data-url="/post" data-name="email" class="contact-email"><%= contact.email %></a><a href ="/post" data-type="text" data-pk="<%= contact.id %>" data-url="/post" data-name="number" class="contact-number"><%= contact.number %></a>
